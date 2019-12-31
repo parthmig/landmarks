@@ -1,11 +1,9 @@
-//
-//  LandmarkList.swift
-//  Landmarks
-//
-//  Created by Parth Miglani on 2019-12-30.
-//  Copyright © 2019 Apple. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
 
+Abstract:
+A view showing a list of landmarks.
+*/
 
 import SwiftUI
 
@@ -24,10 +22,6 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
-            LandmarkList()
-            .previewDevice(PreviewDevice(rawValue: deviceName))
-            .previewDisplayName(deviceName)
-        }
+        LandmarkList()
     }
 }

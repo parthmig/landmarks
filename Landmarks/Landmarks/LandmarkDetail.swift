@@ -1,4 +1,7 @@
 /*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
 A view showing the details for a landmark.
 */
 
@@ -14,7 +17,7 @@ struct LandmarkDetail: View {
                 .frame(height: 300)
 
             CircleImage(image: landmark.image)
-                .offset(y: -130)
+                .offset(x: 0, y: -130)
                 .padding(.bottom, -130)
 
             VStack(alignment: .leading) {
@@ -33,11 +36,11 @@ struct LandmarkDetail: View {
 
             Spacer()
         }
-        .navigationBarTitle(Text(landmark.name), displayMode: .inline)
+        .navigationBarTitle(Text(verbatim: landmark.name), displayMode: .inline)
     }
 }
 
-struct LandmarkDetail_Preview: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkDetail(landmark: landmarkData[0])
     }
